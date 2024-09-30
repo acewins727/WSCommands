@@ -55,15 +55,17 @@ public class AddWorldProcedure {
 				if (commands.get("DedicatedMode").getAsBoolean()) {
 					if (!(entity instanceof ServerPlayer _plr3 && _plr3.level() instanceof ServerLevel
 							&& _plr3.getAdvancements().getOrStartProgress(_plr3.server.getAdvancements().getAdvancement(new ResourceLocation("wscommands:new_world"))).isDone())) {
-						if (entity instanceof ServerPlayer _player) {
-							Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("wscommands:new_world"));
-							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-							if (!_ap.isDone()) {
-								for (String criteria : _ap.getRemainingCriteria())
-									_player.getAdvancements().award(_adv, criteria);
+						if (!commands.get("Repeat").getAsBoolean()) {
+							if (entity instanceof ServerPlayer _player) {
+								Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("wscommands:new_world"));
+								AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+								if (!_ap.isDone()) {
+									for (String criteria : _ap.getRemainingCriteria())
+										_player.getAdvancements().award(_adv, criteria);
+								}
 							}
 						}
-						for (int index0 = 0; index0 < (int) (commands.size() - 1); index0++) {
+						for (int index0 = 0; index0 < (int) (commands.size() - 2); index0++) {
 							{
 								Entity _ent = entity;
 								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
@@ -76,17 +78,19 @@ public class AddWorldProcedure {
 					}
 				} else {
 					if (world.players().size() == 1) {
-						if (!(entity instanceof ServerPlayer _plr9 && _plr9.level() instanceof ServerLevel
-								&& _plr9.getAdvancements().getOrStartProgress(_plr9.server.getAdvancements().getAdvancement(new ResourceLocation("wscommands:new_world"))).isDone())) {
-							if (entity instanceof ServerPlayer _player) {
-								Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("wscommands:new_world"));
-								AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-								if (!_ap.isDone()) {
-									for (String criteria : _ap.getRemainingCriteria())
-										_player.getAdvancements().award(_adv, criteria);
+						if (!(entity instanceof ServerPlayer _plr10 && _plr10.level() instanceof ServerLevel
+								&& _plr10.getAdvancements().getOrStartProgress(_plr10.server.getAdvancements().getAdvancement(new ResourceLocation("wscommands:new_world"))).isDone())) {
+							if (!commands.get("Repeat").getAsBoolean()) {
+								if (entity instanceof ServerPlayer _player) {
+									Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("wscommands:new_world"));
+									AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+									if (!_ap.isDone()) {
+										for (String criteria : _ap.getRemainingCriteria())
+											_player.getAdvancements().award(_adv, criteria);
+									}
 								}
 							}
-							for (int index1 = 0; index1 < (int) (commands.size() - 1); index1++) {
+							for (int index1 = 0; index1 < (int) (commands.size() - 2); index1++) {
 								{
 									Entity _ent = entity;
 									if (!_ent.level().isClientSide() && _ent.getServer() != null) {

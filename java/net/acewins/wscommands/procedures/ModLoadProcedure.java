@@ -34,10 +34,11 @@ public class ModLoadProcedure {
 			} catch (IOException exception) {
 				exception.printStackTrace();
 			}
+			commands.addProperty("Repeat", false);
 			commands.addProperty("DedicatedMode", false);
 			commands.addProperty("1", "say WorldStartCommands is not configured yet");
 			commands.addProperty("2", "say go to your config folder and find WSCommands.json to configure it");
-			commands.addProperty("3", "wsc reset");
+			commands.addProperty("3", "wsc @s reset");
 			{
 				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {
