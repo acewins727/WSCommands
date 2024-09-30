@@ -1,4 +1,4 @@
-package net.acewins.wscommands.procedures;
+package net.acewins.wscommands.codeparts;
 
 import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -13,7 +13,7 @@ import java.io.FileWriter;
 import java.io.File;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ModLoadProcedure {
+public class ModLoad {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		execute();

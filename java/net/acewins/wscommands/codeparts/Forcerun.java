@@ -1,4 +1,4 @@
-package net.acewins.wscommands.procedures;
+package net.acewins.wscommands.codeparts;
 
 import net.minecraftforge.fml.loading.FMLPaths;
 
@@ -12,7 +12,7 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
-public class ForceRunProcedure {
+public class Forcerun {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;

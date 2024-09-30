@@ -27,11 +27,11 @@ import java.util.ArrayList;
 import java.util.AbstractMap;
 
 @Mod("wscommands")
-public class WscommandsMod {
-	public static final Logger LOGGER = LogManager.getLogger(WscommandsMod.class);
+public class WSCommands {
+	public static final Logger LOGGER = LogManager.getLogger(WSCommands.class);
 	public static final String MODID = "wscommands";
 
-	public WscommandsMod() {
+	public WSCommands() {
 		// Start of user code block mod constructor
 		// End of user code block mod constructor
 		MinecraftForge.EVENT_BUS.register(this);
