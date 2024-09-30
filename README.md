@@ -1,4 +1,4 @@
-available on [modrinth](https://modrinth.com/mod/world-start-commands-and-global-gamerules) and [curseforge](https://www.curseforge.com/minecraft/mc-mods/world-start-commands-and-global-gamerules) 
+available on [modrinth](https://modrinth.com/mod/world-start-commands-and-global-gamerules) and [curseforge](https://www.curseforge.com/minecraft/mc-mods/world-start-commands-and-global-gamerules) (I prefer modrinth if you don't mind)
 
 This mod is originally made for setting global gamerules that will apply to every world but it works with any other commands.
 
