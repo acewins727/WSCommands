@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="WSCommands:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/WSCommands_jar</output-path>
-    <root id="archive" name="WSCommands.jar">
-      <element id="module-output" name="WSCommands" />
-    </root>
-  </artifact>
-</component>
