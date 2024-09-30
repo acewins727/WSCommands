@@ -1,4 +1,4 @@
-package net.acewins.wscommands.codeparts;
+package net.acewins.wscommands.procedures;
 
 import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.fml.common.Mod;
@@ -24,7 +24,7 @@ import java.io.File;
 import java.io.BufferedReader;
 
 @Mod.EventBusSubscriber
-public class AddWorld {
+public class AddWorldProcedure {
 	@SubscribeEvent
 	public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
 		execute(event, event.getEntity().level(), event.getEntity());

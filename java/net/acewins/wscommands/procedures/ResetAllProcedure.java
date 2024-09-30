@@ -1,4 +1,4 @@
-package net.acewins.wscommands.codeparts;
+package net.acewins.wscommands.procedures;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
@@ -7,7 +7,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
-public class ResetAll {
+public class ResetAllProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;

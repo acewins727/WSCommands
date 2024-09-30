@@ -14,12 +14,12 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.commands.Commands;
 
-import net.acewins.wscommands.codeparts.Reset;
-import net.acewins.wscommands.codeparts.ResetAll;
-import net.acewins.wscommands.codeparts.Forcerun;
+import net.acewins.wscommands.procedures.ResetProcedure;
+import net.acewins.wscommands.procedures.ResetAllProcedure;
+import net.acewins.wscommands.procedures.ForceRunProcedure;
 
 @Mod.EventBusSubscriber
-public class WSC {
+public class WSCCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
 		event.getDispatcher().register(Commands.literal("wsc").requires(s -> s.hasPermission(4)).then(Commands.literal("reset").executes(arguments -> {
@@ -34,7 +34,7 @@ public class WSC {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			Reset.execute(entity);
+			ResetProcedure.execute(entity);
 			return 0;
 		})).then(Commands.literal("forcerun").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
@@ -48,7 +48,7 @@ public class WSC {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			Forcerun.execute(entity);
+			ForceRunProcedure.execute(entity);
 			return 0;
 		})).then(Commands.literal("resetall").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
@@ -62,7 +62,7 @@ public class WSC {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			ResetAll.execute(entity);
+			ResetAllProcedure.execute(entity);
 			return 0;
 		})));
 	}
