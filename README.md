@@ -41,7 +41,7 @@ If `DedicatedMode` is set to `true`, the commands will run for every single play
 
 Commands don't run at world creation ? Try doing `/wsc forcerun` (need OP), if it shows a message in red saying it was unable to run the command, you probably forgot a comma somewhere in your config (all lines have a comma except the last one)  
 Commands do run but gamerules aren't set ? Minecraft is very specific with the capitalization of the gamerules (`gamerule keepinventory` or `gamerule Keepinventory` for example will NOT work as the correct capitalization is `gamerule keepInventory`)  
-Be very careful with commands that include quotation marks as json is pretty stupid and will confuse everything, use `\"` instead of just `"` within the command if you want it to work  
+Be very careful when going to a command block directly to the json file as you have to replace anything inside the command that the json format uses (ex: `\` becomes `\\`, `"` becomes `\"` and `'` becomes `\'`)  
 
 Feel free to message me on discord (acewins) if you have any issues.  
 
