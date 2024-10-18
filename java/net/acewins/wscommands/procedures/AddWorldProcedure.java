@@ -1,10 +1,10 @@
 package net.acewins.wscommands.procedures;
 
-import net.minecraftforge.fml.loading.FMLPaths;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.fml.loading.FMLPaths;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
@@ -14,7 +14,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.advancements.AdvancementProgress;
-import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementHolder;
 
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class AddWorldProcedure {
 	@SubscribeEvent
 	public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
@@ -53,15 +53,16 @@ public class AddWorldProcedure {
 				bufferedReader.close();
 				commands = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 				if (commands.get("DedicatedMode").getAsBoolean()) {
-					if (!(entity instanceof ServerPlayer _plr3 && _plr3.level() instanceof ServerLevel
-							&& _plr3.getAdvancements().getOrStartProgress(_plr3.server.getAdvancements().getAdvancement(new ResourceLocation("wscommands:new_world"))).isDone())) {
+					if (!(entity instanceof ServerPlayer _plr3 && _plr3.level() instanceof ServerLevel && _plr3.getAdvancements().getOrStartProgress(_plr3.server.getAdvancements().get(new ResourceLocation("wscommands:new_world"))).isDone())) {
 						if (!commands.get("Repeat").getAsBoolean()) {
 							if (entity instanceof ServerPlayer _player) {
-								Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("wscommands:new_world"));
-								AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-								if (!_ap.isDone()) {
-									for (String criteria : _ap.getRemainingCriteria())
-										_player.getAdvancements().award(_adv, criteria);
+								AdvancementHolder _adv = _player.server.getAdvancements().get(new ResourceLocation("wscommands:new_world"));
+								if (_adv != null) {
+									AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+									if (!_ap.isDone()) {
+										for (String criteria : _ap.getRemainingCriteria())
+											_player.getAdvancements().award(_adv, criteria);
+									}
 								}
 							}
 						}
@@ -79,14 +80,16 @@ public class AddWorldProcedure {
 				} else {
 					if (world.players().size() == 1) {
 						if (!(entity instanceof ServerPlayer _plr10 && _plr10.level() instanceof ServerLevel
-								&& _plr10.getAdvancements().getOrStartProgress(_plr10.server.getAdvancements().getAdvancement(new ResourceLocation("wscommands:new_world"))).isDone())) {
+								&& _plr10.getAdvancements().getOrStartProgress(_plr10.server.getAdvancements().get(new ResourceLocation("wscommands:new_world"))).isDone())) {
 							if (!commands.get("Repeat").getAsBoolean()) {
 								if (entity instanceof ServerPlayer _player) {
-									Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("wscommands:new_world"));
-									AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
-									if (!_ap.isDone()) {
-										for (String criteria : _ap.getRemainingCriteria())
-											_player.getAdvancements().award(_adv, criteria);
+									AdvancementHolder _adv = _player.server.getAdvancements().get(new ResourceLocation("wscommands:new_world"));
+									if (_adv != null) {
+										AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+										if (!_ap.isDone()) {
+											for (String criteria : _ap.getRemainingCriteria())
+												_player.getAdvancements().award(_adv, criteria);
+										}
 									}
 								}
 							}

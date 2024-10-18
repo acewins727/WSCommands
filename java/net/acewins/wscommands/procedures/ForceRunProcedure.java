@@ -1,6 +1,6 @@
 package net.acewins.wscommands.procedures;
 
-import net.minecraftforge.fml.loading.FMLPaths;
+import net.neoforged.fml.loading.FMLPaths;
 
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
