@@ -31,7 +31,7 @@ public class ForceRunProcedure {
 				}
 				bufferedReader.close();
 				commands = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-				for (int index0 = 0; index0 < (int) commands.size(); index0++) {
+				for (int index0 = 0; index0 < (int) (commands.size() - 2); index0++) {
 					{
 						Entity _ent = entity;
 						if (!_ent.level().isClientSide() && _ent.getServer() != null) {
