@@ -1,5 +1,7 @@
 available on [modrinth](https://modrinth.com/mod/world-start-commands-and-global-gamerules) and [curseforge](https://www.curseforge.com/minecraft/mc-mods/world-start-commands-and-global-gamerules) (I prefer modrinth if you don't mind)
 
+The code available on github is for the 1.20.1 forge version only
+
 This mod is originally made for setting global gamerules that will apply to every world but it works with any other commands.
 
 When you first start your game the mod will create a file called WSCommands.json in your config folder which is formatted like so:  
