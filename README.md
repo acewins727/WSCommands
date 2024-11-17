@@ -33,7 +33,7 @@ example:
 ```
 this will first give the resistance effect to every player, then set keepInventory to true and doInsomnia to false, then give a diamond to a random player in the world  
 \
-If `Repeat` is set to `true`, the commands will run every single time the world is loaded (or every time a player joins the world if `DedicatedMode` is set to `true`.  
+If `Repeat` is set to `true`, the commands will run every single time the world is loaded (or every time a player joins the world if `DedicatedMode` is set to `true`.)  
 If `DedicatedMode` is set to `true`, the commands will run for every single player that joins the world for the first time.
 
 `/wsc [target] forcerun` will run the commands directly  
