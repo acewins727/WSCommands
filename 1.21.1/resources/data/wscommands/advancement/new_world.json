@@ -1,0 +1,7 @@
+{
+  "criteria": {
+    "new_world_0": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
