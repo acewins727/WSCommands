@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="[41,)"
+license="GNU GPLv3"
+
+[[mods]]
+modId="wscommands"
+version="1.0.6"
+displayName="World Start Commands and Global Configs"
+displayURL="https://modrinth.com/user/acewins"
+credits="hopefully this works as i want it to"
+authors="acewins"
+description="Runs commands on world creation!"
+displayTest="IGNORE_SERVER_VERSION"
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+[[dependencies.wscommands]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.19,)"
+ordering="AFTER"
+side="BOTH"
+
+
+
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration
