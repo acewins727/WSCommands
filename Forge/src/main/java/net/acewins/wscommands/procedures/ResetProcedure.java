@@ -8,22 +8,17 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
 public class ResetProcedure {
-    public static void execute(Entity entity) {
-        if (entity == null || entity.getServer() == null) return;
-
-        executeCommand(entity, "advancement revoke @s only wscommands:new_world");
-
-        if (entity instanceof Player player && !player.level().isClientSide()) {
-            player.displayClientMessage(Component.translatable("message.wscommands.reset"), false);
-        }
-    }
-
-    private static void executeCommand(Entity entity, String command) {
-        if (!entity.level().isClientSide() && entity.getServer() != null) {
-            entity.getServer().getCommands().performPrefixedCommand(
-                    new CommandSourceStack(CommandSource.NULL, entity.position(), entity.getRotationVector(),
-                            entity.level() instanceof ServerLevel ? (ServerLevel) entity.level() : null, 4,
-                            entity.getName().getString(), entity.getDisplayName(), entity.level().getServer(), entity), command);
-        }
-    }
+	public static void execute(Entity entity) {
+		if (entity == null)
+			return;
+		{
+			Entity _ent = entity;
+			if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+				_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+						_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "advancement revoke @s only wscommands:new_world");
+			}
+		}
+		if (entity instanceof Player _player && !_player.level().isClientSide())
+			_player.displayClientMessage(Component.literal("The commands will run again at next world start!"), false);
+	}
 }

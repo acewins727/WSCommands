@@ -1,18 +1,18 @@
 Java Launcher: C:\Users\maelt\.gradle\jdks\eclipse_adoptium-17-amd64-windows\jdk-17.0.11+9\bin\java.exe
-Arguments: '--clean, C:\Users\maelt\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.20.1-20230612.114412\joined-1.20.1-20230612.114412-srg.jar, --output, C:\Users\maelt\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.3.33\forge-1.20.1-47.3.33-binpatched.jar, --apply, C:\Users\maelt\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.3.33\forge-1.20.1-47.3.33-binpatches.lzma'
+Arguments: '--clean, C:\Users\maelt\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.20.1-20230612.114412\joined-1.20.1-20230612.114412-srg.jar, --output, C:\Users\maelt\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.4.0\forge-1.20.1-47.4.0-binpatched.jar, --apply, C:\Users\maelt\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.4.0\forge-1.20.1-47.4.0-binpatches.lzma'
 Classpath:
  - C:\Users\maelt\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\binarypatcher\1.1.1\binarypatcher-1.1.1-fatjar.jar
-Working directory: C:\Users\maelt\Desktop\untitled\build\_applyBinpatches_2
+Working directory: C:\Users\maelt\Desktop\wsc forge\untitled\build\_applyBinpatches_2
 Main class: net.minecraftforge.binarypatcher.ConsoleTool
 ====================================
 Applying: 
   Clean:     C:\Users\maelt\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\joined\1.20.1-20230612.114412\joined-1.20.1-20230612.114412-srg.jar
-  Output:    C:\Users\maelt\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.3.33\forge-1.20.1-47.3.33-binpatched.jar
+  Output:    C:\Users\maelt\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.4.0\forge-1.20.1-47.4.0-binpatched.jar
   KeepData:  false
   Unpatched: false
   Pack200:   false
   Legacy:    false
-Loading patches file: C:\Users\maelt\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.3.33\forge-1.20.1-47.3.33-binpatches.lzma
+Loading patches file: C:\Users\maelt\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.20.1-47.4.0\forge-1.20.1-47.4.0-binpatches.lzma
   Reading patch com.mojang.blaze3d.pipeline.RenderTarget.binpatch
     Checksum: 151eb55a Exists: true
   Reading patch com.mojang.blaze3d.platform.GlStateManager$BlendState.binpatch
@@ -2427,6 +2427,8 @@ Loading patches file: C:\Users\maelt\.gradle\caches\forge_gradle\minecraft_user_
     Checksum: 7b63e54a Exists: true
   Reading patch net.minecraft.world.level.block.ChorusFlowerBlock.binpatch
     Checksum: 8aca2cca Exists: true
+  Reading patch net.minecraft.world.level.block.ChorusPlantBlock.binpatch
+    Checksum: b657c137 Exists: true
   Reading patch net.minecraft.world.level.block.CocoaBlock$1.binpatch
     Checksum: b466aa81 Exists: true
   Reading patch net.minecraft.world.level.block.CocoaBlock.binpatch
@@ -4074,6 +4076,7 @@ Processing: C:\Users\maelt\.gradle\caches\forge_gradle\mcp_repo\net\minecraft\jo
   Patching net/minecraft/world/level/block/ChestBlock$4 1/1
   Patching net/minecraft/world/level/block/ChestBlock 1/1
   Patching net/minecraft/world/level/block/ChorusFlowerBlock 1/1
+  Patching net/minecraft/world/level/block/ChorusPlantBlock 1/1
   Patching net/minecraft/world/level/block/CocoaBlock$1 1/1
   Patching net/minecraft/world/level/block/CocoaBlock 1/1
   Patching net/minecraft/world/level/block/ComparatorBlock 1/1
