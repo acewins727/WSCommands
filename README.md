@@ -43,6 +43,6 @@ Commands don't run at world creation ? Try doing `/wsc forcerun` (need OP), if i
 Commands do run but gamerules aren't set ? Minecraft is very specific with the capitalization of the gamerules (`gamerule keepinventory` or `gamerule Keepinventory` for example will NOT work as the correct capitalization is `gamerule keepInventory`)  
 Be very careful when going to a command block directly to the json file as you have to replace anything inside the command that the json format uses (ex: `\` becomes `\\`, `"` becomes `\"` and `'` becomes `\'`)  
 
-Feel free to message me on discord (acewins) if you have any issues.  
+Join the [discord server](https://discord.gg/hxbh7UcxgJ) for support.
 
 icon was taken on game-icons.net
