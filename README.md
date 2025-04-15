@@ -2,6 +2,9 @@ available on [modrinth](https://modrinth.com/mod/world-start-commands-and-global
 
 This mod is originally made for setting global gamerules that will apply to every world but it works with any other commands.
 
+<details>
+  <summary>v1 description</summary>
+  <p>
 When you first start your game the mod will create a file called WSCommands.json in your config folder which is formatted like so:  
 
 ```
@@ -41,8 +44,18 @@ If `DedicatedMode` is set to `true`, the commands will run for every single play
 
 Commands don't run at world creation ? Try doing `/wsc forcerun` (need OP), if it shows a message in red saying it was unable to run the command, you probably forgot a comma somewhere in your config (all lines have a comma except the last one)  
 Commands do run but gamerules aren't set ? Minecraft is very specific with the capitalization of the gamerules (`gamerule keepinventory` or `gamerule Keepinventory` for example will NOT work as the correct capitalization is `gamerule keepInventory`)  
-Be very careful when going to a command block directly to the json file as you have to replace anything inside the command that the json format uses (ex: `\` becomes `\\`, `"` becomes `\"` and `'` becomes `\'`)  
+Be very careful when going from a command block directly to the json file as you have to replace anything inside the command that the json format uses (ex: `\` becomes `\\`, `"` becomes `\"` and `'` becomes `\'`)  
+  </p>
+</details>  
 
-Join the [discord server](https://discord.gg/hxbh7UcxgJ) for support.
+A config file called WSCommands.toml will be generated in the config folder, most important information should be contained there 
+
+### important:  
+
+Commands do run but gamerules aren't set ? Minecraft is very specific with the capitalization of the gamerules (`gamerule keepinventory` or `gamerule Keepinventory` for example will NOT work as the correct capitalization is `gamerule keepInventory`)  
+
+Be very careful when going from a command block directly to the config file as you have to replace anything inside the command that the format uses by adding an anti-slash before (ex: `\` becomes `\\`, `"` becomes `\"` and `'` becomes `\'`)  
+
+Join my discord server for support about my mods!
 
 icon was taken on game-icons.net
