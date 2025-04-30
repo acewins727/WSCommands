@@ -41,23 +41,23 @@ this will first give the resistance effect to every player, then set keepInvento
 \
 If `Repeat` is set to `true`, the commands will run every single time the world is loaded (or every time a player joins the world if `DedicatedMode` is set to `true`.)  
 If `DedicatedMode` is set to `true`, the commands will run for every single player that joins the world for the first time.
-
-`/wsc [target] forcerun` will run the commands directly  
-`/wsc [target] reset` will run the commands again the next time you load the current world  
-
-Commands don't run at world creation ? Try doing `/wsc forcerun` (need OP), if it shows a message in red saying it was unable to run the command, you probably forgot a comma somewhere in your config (all lines have a comma except the last one)  
-Commands do run but gamerules aren't set ? Minecraft is very specific with the capitalization of the gamerules (`gamerule keepinventory` or `gamerule Keepinventory` for example will NOT work as the correct capitalization is `gamerule keepInventory`)  
-Be very careful when going from a command block directly to the json file as you have to replace anything inside the command that the json format uses (ex: `\` becomes `\\`, `"` becomes `\"` and `'` becomes `\'`)  
   </p>
 </details>  
 
-A config file called WSCommands.toml will be generated in the config folder, most important information should be contained there 
+### important: 
+`/wsc [target] forcerun` will run the commands directly  
+`/wsc [target] reset` will run the commands again the next time you load the current world  
+`/wsc null` is a command that does not do anything  
 
-### important:  
+Commands don't run at world creation ? Try doing `/wsc forcerun` (need OP), if it shows a message in red saying it was unable to run the command, you probably forgot a comma somewhere in your config (all lines have a comma except the last one)  
 
 Commands do run but gamerules aren't set ? Minecraft is very specific with the capitalization of the gamerules (`gamerule keepinventory` or `gamerule Keepinventory` for example will NOT work as the correct capitalization is `gamerule keepInventory`)  
 
-Be very careful when going from a command block directly to the config file as you have to replace anything inside the command that the format uses by adding an anti-slash before (ex: `\` becomes `\\`, `"` becomes `\"` and `'` becomes `\'`)  
+Be very careful when going from a command block directly to the json file as you have to replace anything inside the command that the json format uses (ex: `\` becomes `\\`, `"` becomes `\"` and `'` becomes `\'`)  
+
+
+A config file called WSCommands.toml will be generated in the config folder, most important information should be contained there 
+
 
 Join my [discord server](https://discord.com/invite/hxbh7UcxgJ) for support about my mods!
 
